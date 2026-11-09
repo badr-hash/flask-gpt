@@ -1,0 +1,7 @@
+ajoute un bouton permet d effacer la conversation et le bloc dja etablit
+ajouter un drop down fih les specialite , exemple:programmation python
+integration d une base de donne sql lite (stocker la conversation)
+exporter la conversation
+inserer des fichier out genere un resume 
+gerer les erreurs:cles invalide 
+evaluer les reponses 

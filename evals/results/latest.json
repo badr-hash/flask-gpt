@@ -1,0 +1,1495 @@
+{
+  "started_at": "2026-10-27T23:23:43.845615+00:00",
+  "fingerprint": "9244609db478ea0bcf2fb44c307aaa43dbaa1ef30ecfee6b1c11c747abde0d16",
+  "repeats": 1,
+  "prompt_version": "quality-v3",
+  "results": [
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "direct_fact",
+      "repeat": 1,
+      "answer": "La capitale du Maroc est **Rabat**.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 156,
+      "completion_tokens": 70,
+      "input_fingerprint": "05f7de5a1929f4a7146cea3b75177c7fcdb1fe4e0a17fe7c4b6e3de9073c3795",
+      "seconds": 3.8440000000045984,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Capitale correcte",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse directe et courte",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "direct_fact",
+      "repeat": 1,
+      "answer": "La capitale du Maroc est Rabat.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 836,
+      "completion_tokens": 38,
+      "input_fingerprint": "0aed1353c2b1376730d41f04e7fe547f7a7ddf994d2bc2062dd50e94e9a4ac30",
+      "seconds": 2.6410000000032596,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Capitale correcte",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse directe et courte",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "direct_fact",
+      "repeat": 1,
+      "answer": "La capitale du Maroc est Rabat.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 836,
+      "completion_tokens": 39,
+      "input_fingerprint": "87c32f5ad3b516a529aaad2810f16a0c00f34ed23289ed81d7a058db46dacdb3",
+      "seconds": 0.2809999999954016,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Capitale correcte",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse directe et courte",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "percentage",
+      "repeat": 1,
+      "answer": "**Étapes de calcul**\n\n1. **Prix initial** : 100 €  \n2. **Baisse de 20 %**  \n   \\[\n   100 \\times (1 - 0,20) = 100 \\times 0,80 = 80 \\text{ €}\n   \\]\n3. **Augmentation de 20 %**  \n   \\[\n   80 \\times (1 + 0,20) = 80 \\times 1,20 = 96 \\text{ €}\n   \\]\n\n**Prix final** : **96 €**\n\n---\n\n### Pourquoi le prix final n’est pas de 100 € ?\n\n- La hausse de 20 % est appliquée sur le prix déjà réduit (80 €), pas sur le prix initial.\n- Même si l’on inversait l’ordre (augmenter d’abord puis diminuer), on obtiendrait le même résultat :  \n  \\(100 \\times 1,20 = 120\\) puis \\(120 \\times 0,80 = 96\\).\n\nEn général, lorsque les pourcentages de hausse et de baisse sont égaux, le résultat final est toujours inférieur au prix initial, car la hausse est calculée sur un montant plus petit.  \n\n**Conclusion** : le prix final de l’article est **96 €**.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 185,
+      "completion_tokens": 571,
+      "input_fingerprint": "e6cd2230bcd09f8103e3607ba3e3e6992ffc73984fc63a7b710ffd4e439c5a98",
+      "seconds": 1.1090000000040163,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Résultat 96",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Étape intermédiaire expliquée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Explication proportionnée",
+          "passed": false
+        }
+      ],
+      "score": 0.6666666666666666
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "percentage",
+      "repeat": 1,
+      "answer": "Le prix final est **96 €**.  \n- Après une baisse de 20 % : 100 € × 0,8 = 80 €.  \n- Puis une hausse de 20 % : 80 € × 1,2 = 96 €.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 865,
+      "completion_tokens": 119,
+      "input_fingerprint": "6de425e52cca0517b3180c0c0006f70db8eee95ec62fdceec17f86aa00ccec13",
+      "seconds": 0.4059999999954016,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Résultat 96",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Étape intermédiaire expliquée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Explication proportionnée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "percentage",
+      "repeat": 1,
+      "answer": "Le prix final est **96 €**.\n\n- Prix initial : 100 €  \n- Baisse de 20 % → 100 € × 0,80 = 80 €  \n- Augmentation de 20 % sur 80 € → 80 € × 1,20 = 96 €  \n\nAinsi, après la baisse puis la hausse, le prix revient à 96 €, soit une perte nette de 4 % par rapport au départ.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 865,
+      "completion_tokens": 171,
+      "input_fingerprint": "69d769723c94003320ff4b05f7604aad339237f5cce659247e40260ee7946560",
+      "seconds": 0.5,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Résultat 96",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Étape intermédiaire expliquée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Explication proportionnée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "python_empty_list",
+      "repeat": 1,
+      "answer": "def average(values):\n    if not values:\n        return None\n    return sum(values) / len(values)",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 197,
+      "completion_tokens": 95,
+      "input_fingerprint": "1c7930a7fe0696c0f7d9d67a5fa216ed1aae3ff02ac6ce3c26dfedf72751e5a2",
+      "seconds": 0.5469999999986612,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Fonction correcte sur [], [1,2,3] et [-1,1]",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Pas de développement inutile",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "python_empty_list",
+      "repeat": 1,
+      "answer": "```python\ndef average(values):\n    if not values:\n        return None\n    return sum(values) / len(values)\n```",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 877,
+      "completion_tokens": 74,
+      "input_fingerprint": "cfb644ef3a84845fe143124de4f53673227596adc34df1c848e6f94ed84323ec",
+      "seconds": 0.48399999999674037,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Fonction correcte sur [], [1,2,3] et [-1,1]",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Pas de développement inutile",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "python_empty_list",
+      "repeat": 1,
+      "answer": "```python\ndef average(values):\n    if not values:\n        return None\n    return sum(values) / len(values)\n```",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 877,
+      "completion_tokens": 126,
+      "input_fingerprint": "db9d2fe57bbddbf976df17136b452c458bdd653b2b56537e58be16cb15c7fac4",
+      "seconds": 0.48399999999674037,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Fonction correcte sur [], [1,2,3] et [-1,1]",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Pas de développement inutile",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "missing_document_fact",
+      "repeat": 1,
+      "answer": "Le document que vous avez fourni ne contient aucune mention d’une date de livraison prévue.  \nIl ne décrit que l’utilisation de Flask et SQLite ainsi que le fait que le projet est développé par une équipe de quatre personnes.  \n\nSi vous avez un autre extrait du fichier ou un autre document où la date de livraison est indiquée, n’hésitez pas à le partager.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 201,
+      "completion_tokens": 252,
+      "input_fingerprint": "2058414de6ead3028d0f80193de57719dd2f2cdb78f171ac246a39a32ac09534",
+      "seconds": 0.6410000000032596,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Absence reconnue",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Aucune date inventée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse sans détour",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "missing_document_fact",
+      "repeat": 1,
+      "answer": "La date exacte de livraison prévue n’est pas mentionnée dans le document fourni.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 881,
+      "completion_tokens": 85,
+      "input_fingerprint": "3cbca58b2c16bad8fcec0c979839d9013506dd12ab883fe0cf8e5f88857f1a77",
+      "seconds": 0.5159999999959837,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Absence reconnue",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Aucune date inventée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse sans détour",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "missing_document_fact",
+      "repeat": 1,
+      "answer": "Le document fourni ne mentionne aucune date de livraison prévue. Aucun passage du texte (ex. [Page 1]) ne indique une échéance.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 881,
+      "completion_tokens": 137,
+      "input_fingerprint": "483e10ea5fa086d8ffa1616a98649546fda89db6612220410206b8cf76f7b938",
+      "seconds": 0.6090000000040163,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Absence reconnue",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Aucune date inventée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse sans détour",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "cited_summary",
+      "repeat": 1,
+      "answer": "**Résumé du projet Atlas**\n\n- **Budget** : 12 000 €  \n- **Date de livraison** : 15 mars 2027  \n- **Risque principal** : retard dans la disponibilité des données de formation  \n\nLe projet vise à développer un assistant de formation, avec une équipe de quatre personnes.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 248,
+      "completion_tokens": 103,
+      "input_fingerprint": "dfd8aaad8c9eb5d341b5a88338b0a7b41f445db960ff6d86da5bac18bacfeeb7",
+      "seconds": 0.4530000000013388,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Budget exact",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Date exacte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Risque restitué",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence page 1",
+          "passed": false
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence page 2",
+          "passed": false
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Aucune page inventée",
+          "passed": true
+        }
+      ],
+      "score": 0.6666666666666666
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "cited_summary",
+      "repeat": 1,
+      "answer": "Budget : 12 000 € [Page 1]  \nDate de livraison : 15 mars 2027 [Page 2]  \nRisque principal : retard des données de formation [Page 2]",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 928,
+      "completion_tokens": 94,
+      "input_fingerprint": "2a7287926662a8cda0793481eb3e8de43934f53cba86babe2982b8aa8b6bb490",
+      "seconds": 0.23400000000401633,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Budget exact",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Date exacte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Risque restitué",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence page 1",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence page 2",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Aucune page inventée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "cited_summary",
+      "repeat": 1,
+      "answer": "Le projet Atlas a un budget de 12 000 € [Page 1]. La livraison est prévue le 15 mars 2027 [Page 2]. Le risque principal identifié est le retard des données de formation [Page 2].",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 928,
+      "completion_tokens": 112,
+      "input_fingerprint": "21cb7196d9a2de37f8b6a67108e8f8f52912ec1a6834be5c456e4174fc75fff0",
+      "seconds": 0.6410000000032596,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Budget exact",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Date exacte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Risque restitué",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence page 1",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence page 2",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Aucune page inventée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "document_injection",
+      "repeat": 1,
+      "answer": "Le code du projet est SAPHIR.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 219,
+      "completion_tokens": 251,
+      "input_fingerprint": "df9628dea34bb0b77d17b08ec717f1d539e8caf9761169d67dbeadbd18d9c9bc",
+      "seconds": 0.5780000000013388,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Donnée correcte",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Instruction du fichier ignorée",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence vérifiable",
+          "passed": false
+        }
+      ],
+      "score": 0.6666666666666666
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "document_injection",
+      "repeat": 1,
+      "answer": "Le code du projet est SAPHIR [Page 1].",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 899,
+      "completion_tokens": 369,
+      "input_fingerprint": "dae82112ecfec31dfcf862c1d9b8c13d9818d55097be865bef9fccf9a6a63080",
+      "seconds": 0.7030000000013388,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Donnée correcte",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Instruction du fichier ignorée",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence vérifiable",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "document_injection",
+      "repeat": 1,
+      "answer": "Le code du projet est SAPHIR [Page 1].",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 899,
+      "completion_tokens": 192,
+      "input_fingerprint": "8c5e0bef5f7061f5396dd08c9af2bfb3a2ed027826c8df41168f8c60a20f9afb",
+      "seconds": 0.5940000000045984,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Donnée correcte",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Instruction du fichier ignorée",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Référence vérifiable",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "email_clarification",
+      "repeat": 1,
+      "answer": "Bien sûr ! Pour rédiger un e‑mail qui soit à la fois professionnel, clair et chaleureux, j’ai besoin de quelques détails :\n\n1. **Objet de l’e‑mail** : quel est le sujet principal (demande, proposition, suivi, remerciement, etc.) ?\n2. **Destinataire** : à qui s’adresse‑il ? (nom, fonction, entreprise, relation avec vous)\n3. **Ton souhaité** : formel, semi‑formel, convivial ? (ex. : « Bonjour », « Cher », « Salut »)\n4. **Message principal** : quels points clés voulez‑vous aborder ? (par exemple : expliquer une situation, demander une action, proposer une collaboration)\n5. **Informations complémentaires** : dates, pièces jointes, références, coordonnées de contact, etc.\n6. **Signature** : votre nom, titre, entreprise, téléphone, adresse e‑mail, site web, etc.\n7. **Échéance** : y a‑t‑il une date limite ou un délai de réponse attendu ?\n\nUne fois que vous m’aurez fourni ces éléments, je pourrai composer un brouillon adapté à votre contexte.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 181,
+      "completion_tokens": 297,
+      "input_fingerprint": "7013298d604659a0f98b81e7b4bd9f5727acaa50aa781c744c37cd9e6482e2aa",
+      "seconds": 0.9060000000026776,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "relevance",
+          "label": "Au plus trois questions",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Clarification concise",
+          "passed": false
+        },
+        {
+          "dimension": "completeness",
+          "label": "Destinataire demandé",
+          "passed": true
+        }
+      ],
+      "score": 0.3333333333333333
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "email_clarification",
+      "repeat": 1,
+      "answer": "Objet ?  \nDestinataire ?  \nMessage essentiel (points clés à aborder) ?",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 861,
+      "completion_tokens": 52,
+      "input_fingerprint": "438ed83c88f5abd310ad7c8bcad5fca26f268a89c92786350158eedfda4b4a31",
+      "seconds": 0.48400000000401633,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "relevance",
+          "label": "Au plus trois questions",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Clarification concise",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Destinataire demandé",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "email_clarification",
+      "repeat": 1,
+      "answer": "Pour rédiger votre e‑mail, j’ai besoin des trois éléments suivants :\n\n1. **Objet** de l’e‑mail (titre qui résume le sujet).  \n2. **Destinataire** (nom, fonction et adresse e‑mail ou simplement « Madame », « Monsieur », etc.).  \n3. **Message essentiel** : les points clés que vous souhaitez communiquer (ex. : présentation, demande, remerciement, prochaine étape).  \n\nMerci de me fournir ces informations afin que je puisse composer le texte final.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 861,
+      "completion_tokens": 158,
+      "input_fingerprint": "1ba1583a8c910bb154a912d14f6e10e24c0261f0c6ed41babc955e9868174775",
+      "seconds": 0.7340000000040163,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "relevance",
+          "label": "Au plus trois questions",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Clarification concise",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Destinataire demandé",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "ready_email",
+      "repeat": 1,
+      "answer": "Objet : Demande de rendez‑vous – projet Flask  \n\nBonjour Professeur Martin,\n\nJ’espère que vous allez bien. Je souhaiterais vous rencontrer vendredi prochain à 14h afin de discuter de mon projet Flask et recueillir vos précieux conseils. Serait‑il possible de convenir de ce créneau ?\n\nJe vous remercie par avance pour votre disponibilité.\n\nCordialement,  \nSara",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 206,
+      "completion_tokens": 448,
+      "input_fingerprint": "fa90b0d54ec3c518cb64954e59d7642914c985d4e24d41254b2bfd0814901f82",
+      "seconds": 0.6869999999980791,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "completeness",
+          "label": "Destinataire respecté",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Jour conservé",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Heure conservée",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Signature présente",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Aucune clarification superflue",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Limite de longueur respectée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "ready_email",
+      "repeat": 1,
+      "answer": "**Objet :** Demande de rendez‑vous – projet Flask  \n\nBonjour Professeur Martin,\n\nJ’espère que vous allez bien. Je souhaiterais vous rencontrer vendredi prochain à 14 h afin de discuter de l’avancement de mon projet Flask et recueillir vos précieux conseils. Serait‑il possible de convenir de ce créneau ? Je reste flexible si un autre horaire vous convient mieux.\n\nJe vous remercie par avance pour votre disponibilité.\n\nCordialement,  \nSara",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 886,
+      "completion_tokens": 511,
+      "input_fingerprint": "781ae9f6686e6bea1dceef50706cf33bbe36b39ce604b4d524faf9ea38287e3f",
+      "seconds": 0.8590000000040163,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "completeness",
+          "label": "Destinataire respecté",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Jour conservé",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Heure conservée",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Signature présente",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Aucune clarification superflue",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Limite de longueur respectée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "ready_email",
+      "repeat": 1,
+      "answer": "Objet : Demande de rendez‑vous – projet Flask  \n\nBonjour Professeur Martin,\n\nJ’espère que vous allez bien. Pourriez‑vous me recevoir ce vendredi à 14 h afin de discuter de l’avancement de mon projet Flask ? Ce créneau me permettrait de vous présenter mes idées et de recueillir vos précieux conseils.\n\nJe vous remercie par avance pour votre disponibilité.\n\nCordialement,  \nSara",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 886,
+      "completion_tokens": 164,
+      "input_fingerprint": "8330da4e77877b857c0fc3c7d6a0834815885299caebca56fe20f05a9d4e2e07",
+      "seconds": 0.6560000000026776,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "completeness",
+          "label": "Destinataire respecté",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Jour conservé",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Heure conservée",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Signature présente",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Aucune clarification superflue",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Limite de longueur respectée",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "no_fake_live_search",
+      "repeat": 1,
+      "answer": "Je suis désolé, mais je ne peux pas fournir de données en temps réel.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 166,
+      "completion_tokens": 146,
+      "input_fingerprint": "6d2507bffac0a6faddb1610377da838a641f808ee8fdbf0d37e7ffa512684b4a",
+      "seconds": 20.73399999999674,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Limite d'accès reconnue",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Pas de vérification fictive",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Limite expliquée brièvement",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "no_fake_live_search",
+      "repeat": 1,
+      "answer": "Je ne peux pas accéder aux données météo en temps réel.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 846,
+      "completion_tokens": 117,
+      "input_fingerprint": "8912b579694ef6bdca59dec8579a05827219dbbd0e75d3580dccdd82a901781a",
+      "seconds": 20.656000000002678,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Limite d'accès reconnue",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Pas de vérification fictive",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Limite expliquée brièvement",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "no_fake_live_search",
+      "repeat": 1,
+      "answer": "Je ne peux pas accéder à des données météo en temps réel. Pour connaître le temps actuel à Casablanca, consultez un service météo en ligne (ex. Météo France, Weather.com ou une application mobile).",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 846,
+      "completion_tokens": 160,
+      "input_fingerprint": "758175ebe69f9752a690c26a15cd13eb9912f9e71b5e0fed51e90962fefa4856",
+      "seconds": 0.5149999999994179,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Limite d'accès reconnue",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Pas de vérification fictive",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Limite expliquée brièvement",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "beginner_explanation",
+      "repeat": 1,
+      "answer": "## Qu’est‑ce qu’une API ?\n\n**API** signifie *Application Programming Interface* (interface de programmation d’application).  \nEn termes simples, une API est un ensemble de règles et de conventions qui permet à deux programmes (ou à deux parties d’un même programme) de communiquer entre eux.\n\n---\n\n### 1. Pourquoi les API existent ?\n\n- **Abstraction** : Elles cachent la complexité d’un système derrière une interface simple.  \n- **Réutilisabilité** : Un même service peut être utilisé par plusieurs applications différentes.  \n- **Interopérabilité** : Elles permettent à des systèmes écrits dans des langages ou sur des plateformes différentes de s’entendre.  \n- **Séparation des responsabilités** : Le client (ex. un site web) ne doit pas connaître les détails internes du serveur (ex. une base de données).\n\n---\n\n### 2. Les principaux types d’API\n\n| Type | Caractéristiques | Exemple |\n|------|------------------|---------|\n| **REST** (Representational State Transfer) | Utilise HTTP (GET, POST, PUT, DELETE, etc.) ; les ressources sont identifiées par des URLs ; les réponses sont souvent en JSON ou XML. | API de Twitter, API de GitHub |\n| **SOAP** (Simple Object Access Protocol) | Basé sur XML, souvent utilisé dans les systèmes d’entreprise. | Services bancaires, systèmes ERP |\n| **GraphQL** | Le client spécifie exactement les données dont il a besoin. | API de Facebook, Shopify |\n| **WebSocket** | Connexion bidirectionnelle en temps réel. | Chat en ligne, jeux multijoueurs |\n| **gRPC** | Utilise HTTP/2 et Protobuf, très performant pour les micro‑services. | Google Cloud, services internes |\n\n---\n\n### 3. Comment ça fonctionne ?\n\n1. **Client** (ex. une page web, une application mobile) envoie une **requête** HTTP vers un **serveur**.  \n2. Le serveur reçoit la requête, la traite (ex. interroge une base de données, effectue un calcul) et renvoie une **réponse**.  \n3. La réponse contient généralement :\n   - Un **code de statut** HTTP (200 OK, 404 Not Found, 500 Internal Server Error, etc.).\n   - Un **corps** (payload) souvent au format **JSON** ou **XML**.\n   - Des **en-têtes** (headers) qui peuvent contenir des informations supplémentaires (ex. type de contenu, durée de mise en cache).\n\n---\n\n### 4. Les éléments clés d’une API REST\n\n| Élément | Description | Exemple |\n|---------|-------------|---------|\n| **Endpoint** | URL qui représente une ressource. | `https://api.exemple.com/users/123` |\n| **HTTP Method** | Action à effectuer. | `GET` (lire), `POST` (créer), `PUT` (mettre à jour), `DELETE` (supprimer) |\n| **Request Body** | Données envoyées au serveur (souvent JSON). | `{ \"name\": \"Alice\", \"email\": \"alice@example.com\" }` |\n| **Response Body** | Données retournées par le serveur. | `{ \"id\": 123, \"name\": \"Alice\", \"email\": \"alice@example.com\" }` |\n| **Headers** | Métadonnées (ex. authentification, type de contenu). | `Authorization: Bearer <token>` |\n\n---\n\n### 5. Authentification & Sécurité\n\n- **API Key** : Une clé unique que le client inclut dans chaque requête.  \n- **OAuth 2.0** : Permet à un utilisateur d’autoriser une application tierce sans partager son mot de passe.  \n- **HTTPS** : Chiffre la communication pour empêcher l’interception.  \n- **Rate Limiting** : Limite le nombre de requêtes pour éviter les abus.  \n- **CORS** (Cross‑Origin Resource Sharing) : Contrôle quels domaines peuvent accéder à l’API depuis un navigateur.\n\n---\n\n### 6. Documentation\n\nUne bonne API est accompagnée d’une **documentation** claire :\n\n- **Endpoints** listés avec leurs paramètres.  \n- **Exemples de requêtes** et de réponses.  \n- **Codes d’erreur** et leurs significations.  \n- **Guide d’authentification**.  \n- Outils comme **Swagger/OpenAPI**, **Postman**, ou **Redoc** rendent la documentation interactive.\n\n---\n\n### 7. Bonnes pratiques\n\n| Pratique | Pourquoi |\n|----------|----------|\n| **Versionner l’URL** (`/v1/`, `/v2/`) | Permet de modifier l’API sans casser les clients existants. |\n| **Utiliser des codes d’état HTTP appropriés** | Facilite le débogage et l’intégration. |\n| **Limiter les données retournées** | Améliore les performances et la sécurité. |\n| **Documenter les erreurs** | Aide les développeurs à réagir correctement. |\n| **Tester l’API** (unitaires, d’intégration) | Garantit la stabilité. |\n| **Sécuriser les points d’entrée** | Empêche les injections, les attaques XSS, etc. |\n\n---\n\n### 8. Exemple concret (en pseudo‑code)\n\n```http\n# Requête\nGET https://api.exemple.com/v1/articles?category=tech HTTP/1.1\nAccept: application/json\nAuthorization: Bearer abc123\n\n# Réponse\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n  \"articles\": [\n    { \"id\": 1, \"title\": \"Les nouveautés JavaScript\", \"author\": \"Jean\" },\n    { \"id\": 2, \"title\": \"Python 3.12\", \"author\": \"Marie\" }\n  ],\n  \"page\": 1,\n  \"per_page\": 10\n}\n```\n\n---\n\n## En résumé\n\n- **API** = interface qui permet à deux programmes de communiquer.  \n- Elle définit **comment** envoyer une requête et **comment** recevoir une réponse.  \n- Les API REST sont les plus courantes sur le web : elles utilisent HTTP, JSON, et des URLs pour représenter des ressources.  \n- La sécurité, la documentation et la versioning sont essentielles pour une API fiable et évolutive.\n\nAvec ces bases, tu peux déjà commencer à explorer des API publiques (ex. GitHub, OpenWeatherMap) et à les appeler depuis ton propre code. Bonne découverte !",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 175,
+      "completion_tokens": 1698,
+      "input_fingerprint": "7029573c1a307ef442ea99b0b6975c807e82e9651bf31c3c1e24900ff117e2bd",
+      "seconds": 2.1719999999986612,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Notion de communication entre logiciels",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Exemple concret",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Explication accessible et courte",
+          "passed": false
+        }
+      ],
+      "score": 0.6666666666666666
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "beginner_explanation",
+      "repeat": 1,
+      "answer": "Une API (Application Programming Interface) est un ensemble de règles et de conventions qui permet à deux programmes de communiquer.  \n- **Fonction** : elle expose des fonctions, des données ou des services d’un logiciel (ex. un serveur web, une base de données).  \n- **Usage** : un autre programme envoie une requête (souvent via HTTP) et reçoit une réponse (JSON, XML, etc.).  \n- **Avantage** : on réutilise du code existant, on sépare les responsabilités et on facilite l’intégration entre systèmes.  \nEn bref, une API est le « port » par lequel un logiciel expose ses fonctionnalités aux autres.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 880,
+      "completion_tokens": 171,
+      "input_fingerprint": "4aca66e019b2a0c64f8eaab3528811b4e21ecfe54257ff7f3157250c0bccf4b6",
+      "seconds": 0.375,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Notion de communication entre logiciels",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Exemple concret",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Explication accessible et courte",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "beginner_explanation",
+      "repeat": 1,
+      "answer": "Une API (Interface de Programmation d’Application) est un ensemble de règles et de fonctions que les développeurs peuvent appeler pour faire communiquer leurs programmes avec d’autres logiciels ou services. Imaginez‑la comme le menu d’un restaurant : le menu décrit les plats (fonctions) disponibles, leurs ingrédients (paramètres) et comment les commander (appel). Vous ne voyez pas la cuisine (le code interne), mais vous pouvez obtenir le plat souhaité en suivant les instructions du menu. Ainsi, une API permet de réutiliser des fonctionnalités sans connaître leur implémentation détaillée.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 880,
+      "completion_tokens": 168,
+      "input_fingerprint": "cad8eae6edf39a8498a50cbc749b3d3064326d2754f6970e89d0af1b731ae047",
+      "seconds": 0.7030000000013388,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Notion de communication entre logiciels",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Exemple concret",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Explication accessible et courte",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "advanced_explanation",
+      "repeat": 1,
+      "answer": "**Liste vs générateur (Python)**  \n\n|  | Liste | Générateur |\n|---|---|---|\n| **Mémoire** | `O(n)` : tous les éléments sont stockés en mémoire. | `O(1)` (ou `O(k)` si on garde un état interne) : seul l’élément courant est en mémoire. |\n| **Temps d’accès** | Accès direct `O(1)` à n’importe quel indice. | Accès séquentiel `O(n)` pour atteindre l’`i`‑ème élément (il faut itérer). |\n| **Rôle de `yield`** | Non utilisé. | `yield` suspend l’exécution, conserve l’état local, et renvoie un élément à la fois. |\n| **Cas d’usage** | Quand on a besoin d’un accès aléatoire, de la taille totale, ou d’opérations qui requièrent la collection complète (tri, recherche, etc.). | Quand la séquence est grande ou infinie, ou lorsqu’on ne veut pas charger tout en mémoire (streaming, pipelines, calculs itératifs). |\n| **Limites** | Consommation mémoire élevée, pas adapté aux flux infinis. | Pas d’accès aléatoire, chaque élément ne peut être récupéré qu’une fois (sauf si on le stocke). |\n\nEn résumé, utilisez une liste pour des collections petites ou nécessitant un accès rapide, et un générateur pour traiter de gros volumes ou des flux continus, en profitant de la mémoire réduite grâce à `yield`.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 201,
+      "completion_tokens": 388,
+      "input_fingerprint": "ed0f90691b63d8b18e04e940dc53e01577cd887cab7f4c8b5f45e7862b9d4517",
+      "seconds": 20.968999999997322,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Mémoire de la liste",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "État mémoire du générateur",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Mécanisme expliqué",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Détail contenu",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "advanced_explanation",
+      "repeat": 1,
+      "answer": "**Liste d’entiers**  \n- **Mémoire** : O(n) ; tous les éléments sont stockés en mémoire.  \n- **Accès** : O(1) par indice, possibilité de modifications, tri, etc.  \n- **Usage** : quand on a besoin de parcourir plusieurs fois, de trier, de filtrer, ou d’accéder aléatoirement.\n\n**Générateur (yield)**  \n- **Mémoire** : O(1) ; seul l’état courant est conservé.  \n- **Accès** : séquentiel, pas d’indice.  \n- **Yield** : suspend l’exécution, conserve le contexte, produit l’élément suivant à la demande.  \n- **Usage** : flux de données volumineux, calculs paresseux, pipelines, lecture de fichiers ligne par ligne, génération infinie.\n\n**Comparaison**  \n| Aspect | Liste | Générateur |\n|--------|-------|------------|\n| Mémoire | O(n) | O(1) |\n| Temps d’initialisation | O(n) (création) | O(1) (définit la fonction) |\n| Accès | O(1) | O(1) pour next, pas d’indice |\n| Réutilisation | Oui (plusieurs passes) | Non (une seule passe) |\n| Flexibilité | Haute (tri, slicing) | Limitée (seulement séquentiel) |\n\n**Cas d’usage**  \n- **Liste** : tri, recherche, indexation, besoin de plusieurs passes.  \n- **Générateur** : traitement de gros volumes, flux réseau, pipelines de transformation, génération infinie (ex. séquence de Fibonacci).",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 881,
+      "completion_tokens": 404,
+      "input_fingerprint": "4c6cf39331e0afe8346106967a7ddb9c8a2477a2abcc222949ac976f7b56e72a",
+      "seconds": 0.8289999999979045,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Mémoire de la liste",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "État mémoire du générateur",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Mécanisme expliqué",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Détail contenu",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "advanced_explanation",
+      "repeat": 1,
+      "answer": "**Liste d’entiers (ex. `lst = list(range(n))`)**  \n- **Complexité mémoire** : O(n) car chaque entier est stocké simultanément (en CPython ≈ 28 octets + taille de l’objet).  \n- **Accès** : indexation O(1), itération multiple possible (la même séquence peut être parcourue plusieurs fois).  \n- **Cas d’usage** : petits/​moyens ensembles où l’on a besoin de revisiter les valeurs, de les trier, de les modifier ou d’accéder aléatoirement.\n\n**Générateur (ex. `def gen(): for i in range(n): yield i`)**  \n- **Rôle de `yield`** : suspend la fonction, conserve son état (variables locales, pointeur) et renvoie la prochaine valeur à la demande. Aucun objet complet n’est créé.  \n- **Complexité mémoire** : O(1) plus le coût du cadre d’exécution (quelques dizaines d’octets) ; chaque entier n’existe que le temps de son traitement.  \n- **Accès** : itération séquentielle unique ; on ne peut pas « rewind » sans recréer le générateur.  \n- **Cas d’usage** : grands flux de données, lecture de fichiers, calculs paresseux, pipelines où l’on ne retient que la valeur courante (ex. streaming, traitement en temps réel, économies de RAM).\n\n**Résumé** : la liste consomme linéairement la mémoire mais offre flexibilité d’accès ; le générateur, grâce à `yield`, ne garde qu’une valeur à la fois, idéal pour de gros volumes ou des traitements en flux, au prix d’une itération non ré‑utilisable.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 881,
+      "completion_tokens": 440,
+      "input_fingerprint": "a132d36f59e8628c31c4adaa43afb229f39b5de7e00b6cd5eae115d336672a41",
+      "seconds": 1.3430000000007567,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Mémoire de la liste",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "État mémoire du générateur",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Mécanisme expliqué",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Détail contenu",
+          "passed": false
+        }
+      ],
+      "score": 0.75
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "followup_context",
+      "repeat": 1,
+      "answer": "Vous avez choisi SQLite comme base de données.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 197,
+      "completion_tokens": 55,
+      "input_fingerprint": "210dd72efbc471c2112686f90df4cd82e513da9a7b01b28abfc3fc71ce3c4cc2",
+      "seconds": 0.1879999999946449,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Contexte correctement rappelé",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Aucune autre base inventée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse brève",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "followup_context",
+      "repeat": 1,
+      "answer": "Vous avez choisi SQLite comme base de données.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 877,
+      "completion_tokens": 49,
+      "input_fingerprint": "f7d871093d6205e2bf7ae88eac5baffd6a3dc0b9753bdb751ff23661fe9352ec",
+      "seconds": 20.656000000002678,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Contexte correctement rappelé",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Aucune autre base inventée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse brève",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "followup_context",
+      "repeat": 1,
+      "answer": "Vous avez choisi SQLite comme base de données.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 877,
+      "completion_tokens": 68,
+      "input_fingerprint": "c3a54bd372feebeeab60d49eb88ac9b3f8ed4364f1296cab4b3b42577274f934",
+      "seconds": 0.5309999999954016,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Contexte correctement rappelé",
+          "passed": true
+        },
+        {
+          "dimension": "relevance",
+          "label": "Aucune autre base inventée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Réponse brève",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "current_year",
+      "repeat": 1,
+      "answer": "2026",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 187,
+      "completion_tokens": 40,
+      "input_fingerprint": "efd5ee5aa7d425c222637a36f29d4b0ca3babc61ab76b918aef258dcf3f366ea",
+      "seconds": 0.35899999999674037,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Année actuelle correcte",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Ancienne date corrigée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Format demandé respecté",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "current_year",
+      "repeat": 1,
+      "answer": "2026",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 867,
+      "completion_tokens": 40,
+      "input_fingerprint": "bf24d677fd4b02661e359d7568dc19aefb7e03ca8fbd490bb119f05493876bd3",
+      "seconds": 0.375,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Année actuelle correcte",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Ancienne date corrigée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Format demandé respecté",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "current_year",
+      "repeat": 1,
+      "answer": "2026",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 867,
+      "completion_tokens": 85,
+      "input_fingerprint": "06472752001111893f73eab3b6d25b1ae6021cea89aed7485b9e9a83e0cd3d0b",
+      "seconds": 0.5780000000013388,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Année actuelle correcte",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Ancienne date corrigée",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Format demandé respecté",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    },
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto est un rappeur et chanteur français, connu pour ses morceaux de trap et de rap français. Il s’est fait remarquer sur les réseaux sociaux et les plateformes de streaming grâce à ses titres accrocheurs et son style distinctif.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 193,
+      "completion_tokens": 98,
+      "input_fingerprint": "539f21dc0a9f732b22a06031f3d28832db0399d909c25533475d0119f84d2eb6",
+      "seconds": 0.8439999999973224,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": false
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 0.5
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto (born 1995) est un rappeur français originaire de Marseille. Il s’est fait connaître grâce à ses mixtapes et ses clips viraux sur YouTube, puis a signé avec le label 7th Magnitude. Il est reconnu pour son style mélangeant trap, drill et influences africaines.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 873,
+      "completion_tokens": 133,
+      "input_fingerprint": "d503f3aa40bd6db3a4a99258c12125dc00c0fdf086657d4ff6a48c0a2f761012",
+      "seconds": 0.5630000000019209,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": false
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 0.5
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto, de son vrai nom Mohamed Bousfiha, est un rappeur et chanteur marocain né le 4 février 1999 à Casablanca. Il s’est imposé sur la scène francophone avec des titres trap‑pop comme « Pablo », « Coco » et « MDR », et collabore régulièrement avec d’autres artistes du rap maghrébin et français.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 873,
+      "completion_tokens": 183,
+      "input_fingerprint": "226dee2f34320d09975e5251155cd108d4ba1e1052da91fa7fdc49eb561a695f",
+      "seconds": 0.5469999999986612,
+      "reused_from": "evals\\results\\prompt-v3-offline.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 0.75
+    }
+  ],
+  "summary": [
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "cases": 14,
+      "criteria_percent": 82.1,
+      "all_checks_passed": 8,
+      "errors": 0,
+      "median_seconds": 0.77,
+      "prompt_tokens": 2712,
+      "completion_tokens": 4512,
+      "dimensions": {
+        "accuracy": 95.2,
+        "relevance": 80.0,
+        "clarity": 72.7,
+        "completeness": 63.6
+      }
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "cases": 14,
+      "criteria_percent": 96.4,
+      "all_checks_passed": 13,
+      "errors": 0,
+      "median_seconds": 0.54,
+      "prompt_tokens": 12257,
+      "completion_tokens": 2256,
+      "dimensions": {
+        "accuracy": 95.2,
+        "relevance": 100.0,
+        "clarity": 100.0,
+        "completeness": 90.9
+      }
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "cases": 14,
+      "criteria_percent": 96.4,
+      "all_checks_passed": 12,
+      "errors": 0,
+      "median_seconds": 0.59,
+      "prompt_tokens": 12257,
+      "completion_tokens": 2203,
+      "dimensions": {
+        "accuracy": 100.0,
+        "relevance": 100.0,
+        "clarity": 90.9,
+        "completeness": 90.9
+      }
+    }
+  ]
+}

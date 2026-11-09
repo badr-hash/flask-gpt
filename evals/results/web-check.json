@@ -1,0 +1,225 @@
+{
+  "started_at": "2026-10-27T23:21:04.766207+00:00",
+  "fingerprint": "b379951bcdc2f49c2b97bbe4d3570f2abe918a621890e68ead93b255ebae4f22",
+  "repeats": 1,
+  "prompt_version": "quality-v3",
+  "results": [
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto est un rappeur et chanteur français, connu pour ses morceaux de trap et de rap français. Il s’est fait remarquer sur les réseaux sociaux et les plateformes de streaming grâce à ses titres accrocheurs et son style distinctif.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 193,
+      "completion_tokens": 98,
+      "input_fingerprint": "539f21dc0a9f732b22a06031f3d28832db0399d909c25533475d0119f84d2eb6",
+      "seconds": 0.8439999999973224,
+      "reused_from": "evals\\results\\latest.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": false
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 0.5
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto (born 1995) est un rappeur français originaire de Marseille. Il s’est fait connaître grâce à ses mixtapes et ses clips viraux sur YouTube, puis a signé avec le label 7th Magnitude. Il est reconnu pour son style mélangeant trap, drill et influences africaines.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 873,
+      "completion_tokens": 133,
+      "input_fingerprint": "d503f3aa40bd6db3a4a99258c12125dc00c0fdf086657d4ff6a48c0a2f761012",
+      "seconds": 0.5630000000019209,
+      "reused_from": "evals\\results\\latest.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": false
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 0.5
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto, de son vrai nom Mohamed Bousfiha, est un rappeur et chanteur marocain né le 4 février 1999 à Casablanca. Il s’est imposé sur la scène francophone avec des titres trap‑pop comme « Pablo », « Coco » et « MDR », et collabore régulièrement avec d’autres artistes du rap maghrébin et français.",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 873,
+      "completion_tokens": 183,
+      "input_fingerprint": "226dee2f34320d09975e5251155cd108d4ba1e1052da91fa7fdc49eb561a695f",
+      "seconds": 0.5469999999986612,
+      "reused_from": "evals\\results\\latest.json",
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": false
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 0.75
+    },
+    {
+      "variant": "web-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "case_id": "correct_misidentified_artist",
+      "repeat": 1,
+      "answer": "ElGrandeToto, de son vrai nom Taha Fahssi, est un rappeur et chanteur marocain né le 3 août 1996 à Casablanca. Il s’est fait connaître à partir de 2016, a sorti plusieurs albums dont *Caméléon* (2021) et *27* (2023), et est l’artiste le plus écouté de la région MENA sur Spotify en 2025.\n\n**Sources consultées**\n- [fr.wikipedia.org - viewing lines 0 - 517 of 517](<https://fr.wikipedia.org/wiki/ElGrandeToto>)",
+      "error": null,
+      "finish_reason": "stop",
+      "prompt_tokens": 11055,
+      "completion_tokens": 191,
+      "input_fingerprint": "227934b6f236c9e7250bcf2c4c1460039d33847909006120c6915ec00a595334",
+      "seconds": 5.9539999999979045,
+      "checks": [
+        {
+          "dimension": "accuracy",
+          "label": "Pays correct",
+          "passed": true
+        },
+        {
+          "dimension": "accuracy",
+          "label": "Activité correcte",
+          "passed": true
+        },
+        {
+          "dimension": "completeness",
+          "label": "Identité réelle correcte",
+          "passed": true
+        },
+        {
+          "dimension": "clarity",
+          "label": "Identification brève",
+          "passed": true
+        }
+      ],
+      "score": 1.0
+    }
+  ],
+  "summary": [
+    {
+      "variant": "baseline-20b",
+      "model": "openai/gpt-oss-20b",
+      "cases": 1,
+      "criteria_percent": 50.0,
+      "all_checks_passed": 0,
+      "errors": 0,
+      "median_seconds": 0.84,
+      "prompt_tokens": 193,
+      "completion_tokens": 98,
+      "dimensions": {
+        "accuracy": 50.0,
+        "relevance": null,
+        "clarity": 100.0,
+        "completeness": 0.0
+      }
+    },
+    {
+      "variant": "quality-gpt-oss-20b",
+      "model": "openai/gpt-oss-20b",
+      "cases": 1,
+      "criteria_percent": 50.0,
+      "all_checks_passed": 0,
+      "errors": 0,
+      "median_seconds": 0.56,
+      "prompt_tokens": 873,
+      "completion_tokens": 133,
+      "dimensions": {
+        "accuracy": 50.0,
+        "relevance": null,
+        "clarity": 100.0,
+        "completeness": 0.0
+      }
+    },
+    {
+      "variant": "quality-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "cases": 1,
+      "criteria_percent": 75.0,
+      "all_checks_passed": 0,
+      "errors": 0,
+      "median_seconds": 0.55,
+      "prompt_tokens": 873,
+      "completion_tokens": 183,
+      "dimensions": {
+        "accuracy": 100.0,
+        "relevance": null,
+        "clarity": 100.0,
+        "completeness": 0.0
+      }
+    },
+    {
+      "variant": "web-gpt-oss-120b",
+      "model": "openai/gpt-oss-120b",
+      "cases": 1,
+      "criteria_percent": 100.0,
+      "all_checks_passed": 1,
+      "errors": 0,
+      "median_seconds": 5.95,
+      "prompt_tokens": 11055,
+      "completion_tokens": 191,
+      "dimensions": {
+        "accuracy": 100.0,
+        "relevance": null,
+        "clarity": 100.0,
+        "completeness": 100.0
+      }
+    }
+  ]
+}

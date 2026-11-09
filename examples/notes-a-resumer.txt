@@ -1,0 +1,13 @@
+Projet Atlas : assistant de formation
+
+Le projet Atlas doit fournir un assistant capable d'expliquer des notions de
+programmation et de résumer des documents de cours. L'équipe compte quatre personnes.
+
+Le budget prévu est de 12 000 euros. La livraison est planifiée le 15 mars 2027.
+Le principal risque identifié est le retard de réception des données de formation.
+
+Les fonctionnalités prioritaires sont la conversation, la sauvegarde des échanges,
+le résumé des documents et l'export de la conversation. Une première démonstration
+doit montrer ces quatre fonctions avec un document court.
+
+Ces données sont fictives et servent uniquement à tester l'application.

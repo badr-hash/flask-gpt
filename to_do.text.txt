@@ -1,0 +1,34 @@
+[x] Ajouter un bouton pour effacer la conversation et les blocs déjà affichés.
+    Nouvelle conversation : supprime les messages, les textes extraits et les évaluations ; annule le flux en cours.
+
+[x] Ajouter un menu déroulant avec les spécialités, par exemple la programmation Python.
+    Six spécialités ; le choix modifie les instructions du modèle et reste enregistré.
+
+[x] Intégrer une base de données SQLite pour stocker la conversation.
+    Messages, spécialité et évaluations persistants ; conversations isolées par session de navigateur.
+
+[x] Exporter la conversation.
+    Téléchargement Markdown, TXT et JSON, avec les noms des fichiers et les évaluations.
+
+[x] Insérer des fichiers et générer un résumé.
+    PDF, DOCX, TXT, MD et CSV ; résumé automatique ou consigne personnalisée ; questions de suivi.
+    Limites : 5 Mo, 40 000 caractères extraits, 50 pages PDF ; erreurs de lecture explicites.
+
+[x] Gérer les erreurs, notamment les clés invalides.
+    Clé absente/invalide, accès refusé, quotas, délai, connexion, document invalide et flux interrompu.
+    Les erreurs ne contaminent jamais l'historique envoyé au modèle ; réessai possible.
+
+[x] Évaluer les réponses.
+    Utile / À améliorer, commentaire facultatif ; modification ou retrait de l'évaluation ; stockage SQLite et export.
+
+VALIDATION : 117 tests backend/SDK et 21 vérifications dans un vrai navigateur réussis.
+Les tests automatisés utilisent des API simulées. Des réponses, résumés et recherches Web ont également été validés avec Groq.
+Pour les réponses IA et les résumés réels : renseigner GROQ_API_KEY dans .env et redémarrer le serveur.
+
+AMÉLIORATIONS COMPLÉMENTAIRES TERMINÉES :
+[x] Historique de plusieurs conversations avec sélection et suppression individuelle.
+[x] Niveaux d'explication débutant, intermédiaire et avancé, conservés par conversation.
+[x] Références de pages PDF ou d'extraits pour les documents sans pagination.
+[x] Motifs précis pour les évaluations et conservation dans les exports.
+[x] Instructions de qualité, date actuelle et comparaison des modèles sur des cas de référence.
+[x] Recherche Web facultative avec liens vers les pages effectivement consultées.
